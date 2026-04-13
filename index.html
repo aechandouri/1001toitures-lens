@@ -178,7 +178,7 @@
       z-index: 2;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 80px 24px 60px;
+      padding: 48px 24px 48px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 48px;
@@ -280,12 +280,12 @@
     /* HERO RIGHT */
     .hero-right {
       position: relative;
-      height: 480px;
+      height: 360px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: stretch;
-      padding: 20px 0 16px;
+      padding: 12px 0 12px;
     }
     .hero-deco-typo {
       pointer-events: none;
@@ -954,95 +954,6 @@
         <span class="deco-line deco-line-1">TOITURE</span>
         <span class="deco-line deco-line-2">ZINC</span>
         <span class="deco-line deco-line-3">COUVERTURE</span>
-      </div>
-
-      <!-- Roof profile SVG — profil de toiture couvreur -->
-      <div class="hero-svg-wrap">
-        <svg class="hero-roof-svg" viewBox="0 0 340 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="cpGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#F5B973"/>
-              <stop offset="60%" stop-color="#E08A45"/>
-              <stop offset="100%" stop-color="#C8682C" stop-opacity="0.6"/>
-            </linearGradient>
-            <linearGradient id="znG" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%"   stop-color="#4E7299" stop-opacity="0.05"/>
-              <stop offset="25%"  stop-color="#6B96BE"/>
-              <stop offset="75%"  stop-color="#6B96BE"/>
-              <stop offset="100%" stop-color="#4E7299" stop-opacity="0.05"/>
-            </linearGradient>
-            <radialGradient id="peakGlw" cx="50%" cy="50%" r="50%">
-              <stop offset="0%"   stop-color="#F5B973" stop-opacity="0.8"/>
-              <stop offset="60%"  stop-color="#E08A45" stop-opacity="0.3"/>
-              <stop offset="100%" stop-color="#C8682C" stop-opacity="0"/>
-            </radialGradient>
-            <radialGradient id="ridgeGlw" cx="50%" cy="15%" r="55%">
-              <stop offset="0%"   stop-color="#E08A45" stop-opacity="0.25"/>
-              <stop offset="100%" stop-color="#C8682C" stop-opacity="0"/>
-            </radialGradient>
-            <clipPath id="lSlope">
-              <polygon points="22,250 170,40 170,250"/>
-            </clipPath>
-            <clipPath id="rSlope">
-              <polygon points="170,40 318,250 170,250"/>
-            </clipPath>
-          </defs>
-
-          <!-- Warm glow behind roof -->
-          <ellipse cx="170" cy="130" rx="155" ry="110" fill="url(#ridgeGlw)"/>
-
-          <!-- LEFT FACE (lumière) -->
-          <polygon points="22,250 170,40 170,250" fill="#0F1829" opacity="0.92"/>
-          <g clip-path="url(#lSlope)">
-            <line x1="0" y1="85"  x2="340" y2="85"  stroke="#263A52" stroke-width="0.8" opacity="0.7"/>
-            <line x1="0" y1="115" x2="340" y2="115" stroke="#263A52" stroke-width="0.8" opacity="0.7"/>
-            <line x1="0" y1="145" x2="340" y2="145" stroke="#263A52" stroke-width="0.8" opacity="0.7"/>
-            <line x1="0" y1="175" x2="340" y2="175" stroke="#263A52" stroke-width="0.8" opacity="0.7"/>
-            <line x1="0" y1="205" x2="340" y2="205" stroke="#263A52" stroke-width="0.8" opacity="0.7"/>
-            <line x1="0" y1="235" x2="340" y2="235" stroke="#263A52" stroke-width="0.6" opacity="0.5"/>
-          </g>
-
-          <!-- RIGHT FACE (ombre) -->
-          <polygon points="170,40 318,250 170,250" fill="#080E18" opacity="0.92"/>
-          <g clip-path="url(#rSlope)">
-            <line x1="0" y1="85"  x2="340" y2="85"  stroke="#1E2E40" stroke-width="0.8" opacity="0.55"/>
-            <line x1="0" y1="115" x2="340" y2="115" stroke="#1E2E40" stroke-width="0.8" opacity="0.55"/>
-            <line x1="0" y1="145" x2="340" y2="145" stroke="#1E2E40" stroke-width="0.8" opacity="0.55"/>
-            <line x1="0" y1="175" x2="340" y2="175" stroke="#1E2E40" stroke-width="0.8" opacity="0.55"/>
-            <line x1="0" y1="205" x2="340" y2="205" stroke="#1E2E40" stroke-width="0.8" opacity="0.55"/>
-            <line x1="0" y1="235" x2="340" y2="235" stroke="#1E2E40" stroke-width="0.6" opacity="0.4"/>
-          </g>
-
-          <!-- Roof outline (copper edge) -->
-          <polyline points="22,250 170,40 318,250" stroke="rgba(200,104,44,0.45)" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-
-          <!-- Zinc gutters (gouttières) -->
-          <rect x="18"  y="246" width="155" height="8" rx="4" fill="url(#znG)" opacity="0.75"/>
-          <rect x="167" y="246" width="155" height="8" rx="4" fill="url(#znG)" opacity="0.75"/>
-
-          <!-- Faîtage (ridge cap copper) -->
-          <rect x="154" y="33" width="32" height="12" rx="4" fill="url(#cpGrad)"/>
-          <rect x="156" y="34" width="28" height="3.5" rx="1.5" fill="rgba(255,220,160,0.45)"/>
-
-          <!-- Peak glow halos -->
-          <circle cx="170" cy="39" r="28" fill="url(#peakGlw)"/>
-          <circle cx="170" cy="39" r="5"  fill="#F5B973" opacity="0.95"/>
-          <circle cx="170" cy="39" r="2.5" fill="#FFF4E0"/>
-
-          <!-- Blueprint dimension lines -->
-          <line x1="22"  y1="262" x2="318" y2="262" stroke="rgba(78,114,153,0.18)" stroke-width="0.8" stroke-dasharray="5,4"/>
-          <line x1="22"  y1="258" x2="22"  y2="266" stroke="rgba(78,114,153,0.25)" stroke-width="1"/>
-          <line x1="318" y1="258" x2="318" y2="266" stroke="rgba(78,114,153,0.25)" stroke-width="1"/>
-          <line x1="8"   y1="40"  x2="8"   y2="250" stroke="rgba(78,114,153,0.12)" stroke-width="0.8" stroke-dasharray="4,4"/>
-          <line x1="4"   y1="40"  x2="12"  y2="40"  stroke="rgba(78,114,153,0.20)" stroke-width="1"/>
-          <line x1="4"   y1="250" x2="12"  y2="250" stroke="rgba(78,114,153,0.20)" stroke-width="1"/>
-
-          <!-- Labels blueprint -->
-          <text x="170" y="28" text-anchor="middle" font-family="'Big Shoulders Display', sans-serif" font-weight="700" font-size="7" fill="rgba(224,138,69,0.75)" letter-spacing="3">FAÎTAGE</text>
-          <text x="85"  y="200" text-anchor="middle" font-family="'Big Shoulders Display', sans-serif" font-weight="700" font-size="7" fill="rgba(107,150,190,0.45)" letter-spacing="2" transform="rotate(-31 85 200)">ARDOISE</text>
-          <text x="255" y="200" text-anchor="middle" font-family="'Big Shoulders Display', sans-serif" font-weight="700" font-size="7" fill="rgba(107,150,190,0.35)" letter-spacing="2" transform="rotate(31 255 200)">COUVERTURE</text>
-          <text x="60"  y="272" text-anchor="middle" font-family="'Big Shoulders Display', sans-serif" font-weight="700" font-size="7" fill="rgba(107,150,190,0.55)" letter-spacing="2">ZINC</text>
-        </svg>
       </div>
 
       <div class="hero-stat-cards">
