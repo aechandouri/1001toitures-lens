@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Couvreur Lens Pas-de-Calais — 1001 Toitures | Couverture & Zinguerie</title>
+  <meta name="description" content="1001 Toitures, votre couvreur à Lens et dans le Pas-de-Calais. Réfection toiture, zinguerie, bac acier, réparation urgence. Devis gratuit — 06 10 93 69 14">
+  <meta name="keywords" content="couvreur Lens, toiture Lens, zinguerie Lens, réfection toiture Pas-de-Calais, couvreur 62, bac acier Lens">
+  <link rel="canonical" href="https://1001toitures-lens.vercel.app">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Epilogue:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"LocalBusiness",
+        "name":"1001 Toitures",
+        "description":"Entreprise de couverture et zinguerie à Lens — réfection toiture, zinguerie sur mesure, bac acier, réparation urgence dans le Pas-de-Calais",
+        "telephone":"+33610936914",
+        "address":{"@type":"PostalAddress","streetAddress":"36 Rue Jean Moulin","addressLocality":"Lens","postalCode":"62300","addressCountry":"FR"},
+        "geo":{"@type":"GeoCoordinates","latitude":50.4380813,"longitude":2.8287161},
+        "url":"https://1001toitures-lens.vercel.app",
+        "areaServed":{"@type":"State","name":"Pas-de-Calais"},
+        "priceRange":"€€",
+        "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"6"}
+      },
+      {
+        "@type":"FAQPage",
+        "mainEntity":[
+          {"@type":"Question","name":"Intervenez-vous en urgence sur les toitures à Lens ?","acceptedAnswer":{"@type":"Answer","text":"Oui, 1001 Toitures intervient rapidement après tempête ou dégât urgent dans tout le Pas-de-Calais."}},
+          {"@type":"Question","name":"Réalisez-vous des devis gratuits ?","acceptedAnswer":{"@type":"Answer","text":"Oui, nous proposons des devis gratuits et sans engagement pour tous vos travaux de toiture et zinguerie."}},
+          {"@type":"Question","name":"Quelles zones couvrez-vous ?","acceptedAnswer":{"@type":"Answer","text":"Lens, Liévin, Hénin-Beaumont, Carvin, Béthune, Douai, Arras et tout le Pas-de-Calais (62)."}}
+        ]
+      }
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --bg:    #080B12;
+      --bg2:   #0D1420;
+      --bg3:   #131C2A;
+      --accent:  #C8682C;
+      --accent2: #E08A45;
+      --zinc:    #4E7299;
+      --zinc2:   #6B96BE;
+      --text:  #EBE7E1;
+      --muted: rgba(235,231,225,0.5);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Epilogue', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* GRAIN */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      background-size: 200px 200px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* CURSOR GLOW */
+    #cursor-glow {
+      position: fixed;
+      top: 0; left: 0;
+      width: 420px; height: 420px;
+      pointer-events: none;
+      z-index: 1;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(200,104,44,0.07) 0%, transparent 70%);
+      transition: opacity .3s;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(8,11,18,0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(200,104,44,0.12);
+    }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .nav-logo {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: 1.35rem;
+      letter-spacing: .02em;
+      color: var(--text);
+      line-height: 1;
+    }
+    .nav-logo span { color: var(--accent2); }
+    .nav-zone {
+      font-size: .78rem;
+      color: var(--muted);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .nav-actions { display: flex; align-items: center; gap: 10px; }
+    .btn-tel {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: .85rem;
+      font-weight: 600;
+      color: var(--text);
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+      border: 1px solid rgba(235,231,225,0.12);
+      transition: border-color .2s, color .2s;
+    }
+    .btn-tel:hover { border-color: var(--accent); color: var(--accent2); }
+    .btn-tel:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .btn-devis {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--accent);
+      color: #fff;
+      font-size: .85rem;
+      font-weight: 700;
+      padding: 9px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background .2s, transform .15s;
+    }
+    .btn-devis:hover { background: var(--accent2); transform: translateY(-1px); }
+    .btn-devis:active { transform: translateY(0); }
+    .btn-devis:focus-visible { outline: 2px solid var(--accent2); outline-offset: 2px; }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 60% at 20% 50%, rgba(78,114,153,0.12) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 70% at 80% 30%, rgba(200,104,44,0.09) 0%, transparent 55%),
+        radial-gradient(ellipse 40% 40% at 50% 90%, rgba(200,104,44,0.05) 0%, transparent 50%),
+        var(--bg);
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 24px 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      width: 100%;
+    }
+    .hero-left {}
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      margin-bottom: 20px;
+      padding: 6px 14px;
+      border: 1px solid rgba(200,104,44,0.3);
+      border-radius: 100px;
+    }
+    .hero-h1 {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2.6rem, 5vw, 4rem);
+      line-height: 1;
+      letter-spacing: -.01em;
+      margin-bottom: 24px;
+    }
+    .hero-h1 .city {
+      display: block;
+      background: linear-gradient(90deg, var(--accent2) 0%, #F5A85A 40%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-lead {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 480px;
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+    .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 36px; }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 14px 28px;
+      border-radius: 10px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background .2s, transform .15s, box-shadow .2s;
+      box-shadow: 0 4px 20px rgba(200,104,44,0.3);
+    }
+    .btn-primary:hover { background: var(--accent2); transform: translateY(-2px); box-shadow: 0 6px 28px rgba(200,104,44,0.4); }
+    .btn-primary:active { transform: translateY(0); }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--text);
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 14px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      border: 1px solid rgba(235,231,225,0.18);
+      cursor: pointer;
+      transition: border-color .2s, color .2s;
+    }
+    .btn-secondary:hover { border-color: var(--accent); color: var(--accent2); }
+    .trust-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .trust-pill {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: .8rem;
+      font-weight: 500;
+      color: var(--muted);
+      background: rgba(255,255,255,0.04);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.07);
+      padding: 5px 12px;
+      border-radius: 100px;
+    }
+    .trust-pill svg { color: var(--accent2); flex-shrink: 0; }
+
+    /* HERO RIGHT */
+    .hero-right {
+      position: relative;
+      height: 480px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: stretch;
+      padding: 20px 0 16px;
+    }
+    .hero-deco-typo {
+      pointer-events: none;
+      user-select: none;
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      line-height: .82;
+      padding: 0 10px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .deco-line { display: block; }
+    .deco-line-1 { font-size: clamp(5rem, 9vw, 8rem); color: rgba(200,104,44,0.13); }
+    .deco-line-2 { font-size: clamp(4rem, 7vw, 6.5rem); color: rgba(78,114,153,0.10); }
+    .deco-line-3 { font-size: clamp(3rem, 5.5vw, 5rem); color: rgba(200,104,44,0.08); letter-spacing: .04em; }
+
+    /* Diagonal roof line SVG */
+    .hero-roof-line {
+      position: absolute;
+      bottom: 110px;
+      left: 0;
+      right: 0;
+      pointer-events: none;
+      opacity: 0.18;
+    }
+
+    .hero-stat-cards {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      width: 100%;
+      flex-shrink: 0;
+    }
+    .stat-card {
+      flex: 1;
+      background: rgba(255,255,255,0.04);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(200,104,44,0.15);
+      border-radius: 12px;
+      padding: 14px 12px;
+      text-align: center;
+      animation: borderPulse 4s ease-in-out infinite;
+    }
+    .stat-card:nth-child(2) { animation-delay: 1.4s; }
+    .stat-card:nth-child(3) { animation-delay: 2.8s; }
+    @keyframes borderPulse {
+      0%, 100% { border-color: rgba(200,104,44,0.15); }
+      50%       { border-color: rgba(200,104,44,0.4);  }
+    }
+    .stat-val {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: 1.3rem;
+      color: var(--accent2);
+      display: block;
+      line-height: 1;
+      margin-bottom: 3px;
+    }
+    .stat-lbl {
+      font-size: .68rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--muted);
+      line-height: 1.3;
+    }
+
+    /* URGENCE */
+    .urgence-strip {
+      position: relative;
+      background: linear-gradient(90deg, rgba(200,104,44,0.12), rgba(200,104,44,0.06));
+      border-top: 1px solid rgba(200,104,44,0.2);
+      border-bottom: 1px solid rgba(200,104,44,0.2);
+      padding: 28px 0;
+      overflow: hidden;
+    }
+    .urgence-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .urgence-icon { color: var(--accent2); flex-shrink: 0; }
+    .urgence-text {}
+    .urgence-title {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: 1.4rem;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+    .urgence-sub { font-size: .9rem; color: var(--muted); }
+    .urgence-cta { margin-left: auto; }
+
+    /* SECTION BASE */
+    .section { position: relative; z-index: 2; padding: 96px 0; }
+    .section-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      margin-bottom: 12px;
+    }
+    .section-tag::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: var(--accent);
+    }
+    .section-title {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+    .section-title span { color: var(--accent2); }
+    .section-sub { font-size: 1rem; color: var(--muted); max-width: 520px; line-height: 1.7; }
+
+    /* SERVICES */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-top: 48px;
+    }
+    .service-card {
+      background: var(--bg2);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 16px;
+      padding: 28px 24px;
+      transition: border-color .25s, box-shadow .25s, transform .2s;
+      cursor: default;
+      transform-style: preserve-3d;
+      transform: perspective(600px) rotateX(0) rotateY(0);
+    }
+    .service-card:hover {
+      border-color: rgba(200,104,44,0.35);
+      box-shadow: 0 8px 32px rgba(200,104,44,0.12);
+    }
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(200,104,44,0.1);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent2);
+      margin-bottom: 16px;
+      transition: background .25s;
+    }
+    .service-card:hover .service-icon { background: rgba(200,104,44,0.2); }
+    .service-name {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+    .service-desc { font-size: .88rem; color: var(--muted); line-height: 1.65; }
+
+    /* DIVIDER */
+    .section-divider {
+      max-width: 1200px;
+      margin: 0 auto;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(200,104,44,0.18), transparent);
+    }
+
+    /* REVIEWS */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 48px;
+    }
+    .review-card {
+      background: var(--bg2);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: border-color .25s;
+    }
+    .review-card:hover { border-color: rgba(200,104,44,0.25); }
+    .review-stars { display: flex; gap: 3px; }
+    .star { color: #FBBF24; font-size: .95rem; }
+    .review-text { font-size: .9rem; color: var(--muted); line-height: 1.7; flex: 1; }
+    .review-author { display: flex; align-items: center; gap: 10px; margin-top: 4px; }
+    .review-avatar {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: .85rem;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .review-name { font-weight: 600; font-size: .88rem; color: var(--text); }
+    .review-date { font-size: .75rem; color: var(--muted); }
+
+    /* Reviews carousel mobile */
+    .reviews-carousel-wrap { display: none; margin-top: 48px; }
+    .reviews-carousel { overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; cursor: grab; }
+    .reviews-carousel::-webkit-scrollbar { display: none; }
+    .reviews-carousel-inner { display: flex; gap: 16px; padding: 4px; width: max-content; }
+    .reviews-carousel .review-card { width: 280px; flex-shrink: 0; }
+
+    /* ZONE */
+    .zone-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 32px;
+    }
+    .zone-pill {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--bg2);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 100px;
+      padding: 7px 16px;
+      font-size: .85rem;
+      color: var(--muted);
+      transition: border-color .2s, color .2s;
+    }
+    .zone-pill:hover { border-color: rgba(200,104,44,0.35); color: var(--text); }
+    .zone-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+
+    /* MAP */
+    .map-container {
+      margin-top: 40px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.07);
+      height: 320px;
+    }
+    .map-container iframe { width: 100%; height: 100%; border: none; }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      margin-top: 48px;
+    }
+    .about-photo-wrap {
+      position: relative;
+    }
+    .about-photo-placeholder {
+      width: 100%;
+      aspect-ratio: 3/4;
+      border-radius: 20px;
+      background: var(--bg3);
+      border: 1px solid rgba(200,104,44,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 12px;
+      color: var(--muted);
+      font-size: .85rem;
+      max-width: 340px;
+    }
+    .about-initials {
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: 1.8rem;
+      color: #fff;
+    }
+    .about-badge {
+      position: absolute;
+      bottom: -12px;
+      right: -12px;
+      background: var(--bg2);
+      border: 1px solid rgba(200,104,44,0.3);
+      border-radius: 12px;
+      padding: 12px 16px;
+      text-align: center;
+    }
+    .about-badge-val {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: 1.5rem;
+      color: var(--accent2);
+      display: block;
+      line-height: 1;
+    }
+    .about-badge-lbl { font-size: .7rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+    .about-content {}
+    .about-name {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: 2rem;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .about-role { font-size: .85rem; color: var(--accent2); text-transform: uppercase; letter-spacing: .1em; margin-bottom: 20px; }
+    .about-text { font-size: .95rem; color: var(--muted); line-height: 1.75; margin-bottom: 24px; }
+    .about-certs { display: flex; flex-direction: column; gap: 10px; }
+    .cert-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: .88rem;
+      color: var(--muted);
+    }
+    .cert-item svg { color: var(--accent2); flex-shrink: 0; }
+
+    /* CTA FORM */
+    .cta-section {
+      background: var(--bg2);
+      border-top: 1px solid rgba(200,104,44,0.12);
+      border-bottom: 1px solid rgba(200,104,44,0.12);
+    }
+    .cta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .cta-left {}
+    .cta-headline {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      line-height: 1.05;
+      margin-bottom: 16px;
+    }
+    .cta-headline span { color: var(--accent2); }
+    .cta-lead { font-size: .95rem; color: var(--muted); line-height: 1.7; margin-bottom: 28px; }
+    .cta-tel-block {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: rgba(200,104,44,0.07);
+      border: 1px solid rgba(200,104,44,0.2);
+      border-radius: 12px;
+      padding: 16px 20px;
+    }
+    .cta-tel-icon { color: var(--accent2); flex-shrink: 0; }
+    .cta-tel-number {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: 1.5rem;
+      color: var(--text);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .cta-tel-number:hover { color: var(--accent2); }
+    .cta-tel-label { font-size: .78rem; color: var(--muted); }
+
+    /* FORM */
+    .contact-form { display: flex; flex-direction: column; gap: 16px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-label {
+      display: block;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      color: var(--text);
+      font-family: 'Epilogue', sans-serif;
+      font-size: .9rem;
+      padding: 11px 14px;
+      outline: none;
+      transition: border-color .2s, box-shadow .2s;
+      -webkit-appearance: none;
+    }
+    .form-input::placeholder, .form-textarea::placeholder { color: rgba(235,231,225,0.3); }
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: rgba(200,104,44,0.5);
+      box-shadow: 0 0 0 3px rgba(200,104,44,0.1);
+    }
+    .form-select { cursor: pointer; }
+    .form-select option { background: var(--bg2); }
+    .form-textarea { resize: vertical; min-height: 100px; }
+    .form-submit {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #fff;
+      font-family: 'Epilogue', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 14px 28px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      transition: background .2s, transform .15s, box-shadow .2s;
+      box-shadow: 0 4px 20px rgba(200,104,44,0.25);
+      width: 100%;
+    }
+    .form-submit:hover { background: var(--accent2); transform: translateY(-1px); box-shadow: 0 6px 28px rgba(200,104,44,0.35); }
+    .form-submit:active { transform: translateY(0); }
+    .form-note { font-size: .75rem; color: var(--muted); text-align: center; }
+
+    /* FOOTER */
+    footer {
+      background: rgba(0,0,0,0.3);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 48px 0 32px;
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .footer-brand-name {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+    .footer-brand-name span { color: var(--accent2); }
+    .footer-brand-desc { font-size: .85rem; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: .85rem;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+    .footer-contact-item svg { color: var(--accent2); flex-shrink: 0; margin-top: 2px; }
+    .footer-contact-item a { color: var(--muted); text-decoration: none; }
+    .footer-contact-item a:hover { color: var(--accent2); }
+    .footer-col-title {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--text);
+      margin-bottom: 14px;
+      letter-spacing: .03em;
+    }
+    .footer-links { display: flex; flex-direction: column; gap: 8px; }
+    .footer-links a { font-size: .85rem; color: var(--muted); text-decoration: none; transition: color .2s; }
+    .footer-links a:hover { color: var(--accent2); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: .78rem;
+      color: var(--muted);
+    }
+    .footer-legal-links { display: flex; gap: 16px; }
+    .footer-legal-links a { color: var(--muted); text-decoration: none; }
+    .footer-legal-links a:hover { color: var(--text); }
+
+    /* MOBILE STICKY BAR */
+    .mobile-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      background: rgba(8,11,18,0.97);
+      backdrop-filter: blur(16px);
+      border-top: 1px solid rgba(200,104,44,0.2);
+      padding: 10px 16px;
+      gap: 10px;
+    }
+    .mobile-bar a {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: .9rem;
+      text-decoration: none;
+    }
+    .mobile-bar .m-tel {
+      background: transparent;
+      border: 1px solid rgba(235,231,225,0.18);
+      color: var(--text);
+    }
+    .mobile-bar .m-devis {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    /* FADE UP */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* PARTICLES */
+    #particles-canvas { position: absolute; inset: 0; pointer-events: none; z-index: 1; }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-right { display: none; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-photo-wrap { max-width: 280px; }
+      .cta-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .reviews-grid { display: none; }
+      .reviews-carousel-wrap { display: block; }
+      .mobile-bar { display: flex; }
+      body { padding-bottom: 72px; }
+      nav .btn-devis { display: none; }
+    }
+    @media (max-width: 480px) {
+      .nav-zone { display: none; }
+      .section { padding: 64px 0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- CURSOR GLOW -->
+<div id="cursor-glow"></div>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-inner">
+    <div>
+      <div class="nav-logo">1001 <span>TOITURES</span></div>
+      <div class="nav-zone">Lens &middot; Pas-de-Calais (62)</div>
+    </div>
+    <div class="nav-actions">
+      <a href="tel:0610936914" class="btn-tel">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.06 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+        06 10 93 69 14
+      </a>
+      <a href="#devis" class="btn-devis">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+        Devis gratuit
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <canvas id="particles-canvas"></canvas>
+  <div class="hero-inner">
+
+    <!-- LEFT -->
+    <div class="hero-left">
+      <div class="hero-tag">
+        <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9,22 9,12 15,12 15,22" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        Couverture &amp; Zinguerie
+      </div>
+      <h1 class="hero-h1">
+        Votre couvreur<br>à
+        <span class="city" id="city-scramble">LENS</span>
+        &amp;<br>Pas-de-Calais
+      </h1>
+      <p class="hero-lead">
+        Réfection complète, réparation urgence, zinguerie sur mesure — 1001 Toitures intervient dans tout le Pas-de-Calais avec fiabilité et professionnalisme.
+      </p>
+      <div class="hero-ctas">
+        <a href="tel:0610936914" class="btn-primary">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.06 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+          Appeler maintenant
+        </a>
+        <a href="#devis" class="btn-secondary">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+          Devis gratuit
+        </a>
+      </div>
+      <div class="trust-pills">
+        <div class="trust-pill">
+          <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Avis clients 5★
+        </div>
+        <div class="trust-pill">
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+          Réponse rapide
+        </div>
+        <div class="trust-pill">
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Devis gratuit &amp; sans engagement
+        </div>
+        <div class="trust-pill">
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Zone 62
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="hero-right">
+      <div class="hero-deco-typo">
+        <span class="deco-line deco-line-1">TOITURE</span>
+        <span class="deco-line deco-line-2">ZINC</span>
+        <span class="deco-line deco-line-3">COUVERTURE</span>
+      </div>
+
+      <!-- Roof ridge SVG -->
+      <svg class="hero-roof-line" viewBox="0 0 400 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polyline points="10,70 200,10 390,70" stroke="url(#roofGrad)" stroke-width="2" stroke-linecap="round"/>
+        <polyline points="10,78 200,18 390,78" stroke="url(#roofGrad2)" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+        <defs>
+          <linearGradient id="roofGrad" x1="10" y1="70" x2="390" y2="70" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#C8682C" stop-opacity="0"/>
+            <stop offset="50%" stop-color="#C8682C"/>
+            <stop offset="100%" stop-color="#4E7299" stop-opacity="0"/>
+          </linearGradient>
+          <linearGradient id="roofGrad2" x1="10" y1="78" x2="390" y2="78" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#4E7299" stop-opacity="0"/>
+            <stop offset="50%" stop-color="#4E7299"/>
+            <stop offset="100%" stop-color="#4E7299" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+      </svg>
+
+      <div class="hero-stat-cards">
+        <div class="stat-card">
+          <span class="stat-val">GRATUIT</span>
+          <span class="stat-lbl">Devis sans engagement</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-val">URGENCE</span>
+          <span class="stat-lbl">Intervention rapide</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-val">5★</span>
+          <span class="stat-lbl">Avis clients Google</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- URGENCE STRIP -->
+<div class="urgence-strip">
+  <div class="urgence-inner">
+    <div class="urgence-icon">
+      <svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
+        <line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+      </svg>
+    </div>
+    <div class="urgence-text">
+      <div class="urgence-title">Toiture endommagée après tempête ?</div>
+      <div class="urgence-sub">Intervention rapide dans tout le Pas-de-Calais — bâche de protection, réparation d'urgence, devis immédiat.</div>
+    </div>
+    <div class="urgence-cta">
+      <a href="tel:0610936914" class="btn-primary">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.06 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+        Appeler maintenant
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="section">
+  <div class="section-inner">
+    <div class="fade-up">
+      <div class="section-tag">Nos prestations</div>
+      <h2 class="section-title">Couverture &amp; Zinguerie à <span>Lens</span></h2>
+      <p class="section-sub">Du remplacement complet de toiture aux petites réparations urgentes — 1001 Toitures intervient sur tous types de couverture dans le Pas-de-Calais.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+            <polyline points="9,22 9,12 15,12 15,22" fill="none" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="service-name">Réfection de toiture complète</div>
+        <div class="service-desc">Remplacement total de couverture ardoise, tuile mécanique ou plate. Démontage, liteau, volige, isolation, pose neuve — travail soigné et devis respecté.</div>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/>
+          </svg>
+        </div>
+        <div class="service-name">Réparation &amp; Entretien</div>
+        <div class="service-desc">Fuite active, tuile cassée, cheminée, solins décollés, mousse et lichens — diagnostic sur place et réparation fiable. Entretien préventif recommandé tous les 5 ans.</div>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M5 12H19M12 5l7 7-7 7"/>
+          </svg>
+        </div>
+        <div class="service-name">Zinguerie sur mesure</div>
+        <div class="service-desc">Gouttières, chéneaux, solins, noues, arêtiers, façonnage zinc — travail de zinguerie précis, façonné et soudé sur mesure pour une étanchéité durable.</div>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <rect x="2" y="3" width="20" height="14" rx="2"/>
+            <path d="M8 21h8M12 17v4"/>
+          </svg>
+        </div>
+        <div class="service-name">Toiture bac acier</div>
+        <div class="service-desc">Pose et réfection de couverture bac acier sur extension, garage, hangar, véranda — solution durable, légère et résistante adaptée aux structures modernes.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- REVIEWS -->
+<section class="section">
+  <div class="section-inner">
+    <div class="fade-up">
+      <div class="section-tag">Avis clients</div>
+      <h2 class="section-title">Ce que disent nos <span>clients</span></h2>
+      <p class="section-sub">Des travaux de toiture dans tout le Pas-de-Calais — voici ce qu'en pensent ceux qui nous ont fait confiance.</p>
+    </div>
+
+    <!-- Desktop grid -->
+    <div class="reviews-grid">
+      <div class="review-card fade-up">
+        <div class="review-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="review-text">«&thinsp;Travail remarquable, l'entreprise a parfaitement géré la complexité du chantier. Détails et explications avant chantier ont été précieux. Entreprise très fiable, devis respecté. Prix très compétitif. Je ne peux que donner un avis très positif. JE RECOMMANDE.&thinsp;»</p>
+        <div class="review-author">
+          <div class="review-avatar">C</div>
+          <div>
+            <div class="review-name">Clément</div>
+            <div class="review-date">novembre 2024</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card fade-up">
+        <div class="review-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="review-text">«&thinsp;Ravis du travail effectué chez nous, très professionnel. Notre toiture est tellement belle que nos voisins (4) sont passés par cette entreprise. Nous n'hésitons pas à le recommander.&thinsp;»</p>
+        <div class="review-author">
+          <div class="review-avatar">BC</div>
+          <div>
+            <div class="review-name">Brigitte Caron</div>
+            <div class="review-date">mai 2021</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card fade-up">
+        <div class="review-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="review-text">«&thinsp;Un grand merci Cyril pour sa réactivité et son professionnalisme. Je recommande vivement.&thinsp;»</p>
+        <div class="review-author">
+          <div class="review-avatar">KH</div>
+          <div>
+            <div class="review-name">Kathelyne Huret</div>
+            <div class="review-date">août 2023 · Fouquières-lès-Lens</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card fade-up">
+        <div class="review-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="review-text">«&thinsp;Intervention rapide et efficace sur une toiture bac acier, suite à des dégâts causés par la tempête de 2021. Entreprise à recommander !&thinsp;»</p>
+        <div class="review-author">
+          <div class="review-avatar">FH</div>
+          <div>
+            <div class="review-name">François Hamon</div>
+            <div class="review-date">juin 2022</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card fade-up">
+        <div class="review-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="review-text">«&thinsp;Intervention presque dans l'urgence, travail nickel.&thinsp;»</p>
+        <div class="review-author">
+          <div class="review-avatar">PB</div>
+          <div>
+            <div class="review-name">Peggy Boulogne-Fassiaux</div>
+            <div class="review-date">février 2022</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card fade-up">
+        <div class="review-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="review-text">«&thinsp;Super boîte.&thinsp;»</p>
+        <div class="review-author">
+          <div class="review-avatar">GF</div>
+          <div>
+            <div class="review-name">Gregory Fillebeen</div>
+            <div class="review-date">août 2021</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile carousel -->
+    <div class="reviews-carousel-wrap">
+      <div class="reviews-carousel" id="rv-carousel">
+        <div class="reviews-carousel-inner">
+          <div class="review-card">
+            <div class="review-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+            <p class="review-text">«&thinsp;Travail remarquable, l'entreprise a parfaitement géré la complexité du chantier. Devis respecté, prix compétitif. JE RECOMMANDE.&thinsp;»</p>
+            <div class="review-author"><div class="review-avatar">C</div><div><div class="review-name">Clément</div><div class="review-date">novembre 2024</div></div></div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+            <p class="review-text">«&thinsp;Notre toiture est tellement belle que nos 4 voisins sont passés par cette entreprise. Nous n'hésitons pas à recommander.&thinsp;»</p>
+            <div class="review-author"><div class="review-avatar">BC</div><div><div class="review-name">Brigitte Caron</div><div class="review-date">mai 2021</div></div></div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+            <p class="review-text">«&thinsp;Un grand merci Cyril pour sa réactivité et son professionnalisme. Je recommande vivement.&thinsp;»</p>
+            <div class="review-author"><div class="review-avatar">KH</div><div><div class="review-name">Kathelyne Huret</div><div class="review-date">août 2023</div></div></div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+            <p class="review-text">«&thinsp;Intervention rapide et efficace sur une toiture bac acier suite à la tempête de 2021. Entreprise à recommander !&thinsp;»</p>
+            <div class="review-author"><div class="review-avatar">FH</div><div><div class="review-name">François Hamon</div><div class="review-date">juin 2022</div></div></div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+            <p class="review-text">«&thinsp;Intervention presque dans l'urgence, travail nickel.&thinsp;»</p>
+            <div class="review-author"><div class="review-avatar">PB</div><div><div class="review-name">Peggy Boulogne-Fassiaux</div><div class="review-date">février 2022</div></div></div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+            <p class="review-text">«&thinsp;Super boîte.&thinsp;»</p>
+            <div class="review-author"><div class="review-avatar">GF</div><div><div class="review-name">Gregory Fillebeen</div><div class="review-date">août 2021</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ZONE -->
+<section class="section">
+  <div class="section-inner">
+    <div class="fade-up">
+      <div class="section-tag">Zone d'intervention</div>
+      <h2 class="section-title">Tout le <span>Pas-de-Calais</span></h2>
+      <p class="section-sub">1001 Toitures intervient dans tout le département 62 — Lens et ses environs, jusqu'à Béthune, Douai, Arras et au-delà.</p>
+    </div>
+    <div class="zone-grid fade-up">
+      <div class="zone-pill"><span class="zone-dot"></span> Lens</div>
+      <div class="zone-pill"><span class="zone-dot"></span> Liévin</div>
+      <div class="zone-pill"><span class="zone-dot"></span> Hénin-Beaumont</div>
+      <div class="zone-pill"><span class="zone-dot"></span> Carvin</div>
+      <div class="zone-pill"><span class="zone-dot"></span> Béthune</div>
+      <div class="zone-pill"><span class="zone-dot"></span> La Bassée</div>
+      <div class="zone-pill"><span class="zone-dot"></span> Douai</div>
+      <div class="zone-pill"><span class="zone-dot"></span> Arras</div>
+      <div class="zone-pill"><span class="zone-dot"></span> Bruay-la-Buissière</div>
+      <div class="zone-pill"><span class="zone-dot"></span> Noeux-les-Mines</div>
+      <div class="zone-pill"><span class="zone-dot"></span> Harnes</div>
+      <div class="zone-pill"><span class="zone-dot"></span> Fouquières-lès-Lens</div>
+      <div class="zone-pill"><span class="zone-dot"></span> Meurchin</div>
+      <div class="zone-pill"><span class="zone-dot"></span> Pas-de-Calais (62)</div>
+    </div>
+    <div class="map-container fade-up">
+      <iframe
+        title="1001 Toitures — Lens"
+        loading="eager"
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFmBWY&q=place_id:0x47dd305628e4af9f:0xc2de8ca20a2a58a9">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ABOUT -->
+<section class="section">
+  <div class="section-inner">
+    <div class="fade-up">
+      <div class="section-tag">À propos</div>
+      <h2 class="section-title">Un couvreur <span>de confiance</span><br>à Lens</h2>
+    </div>
+    <div class="about-grid fade-up">
+      <div class="about-photo-wrap">
+        <div class="about-photo-placeholder">
+          <div class="about-initials">C</div>
+          <span>Cyril — Couvreur Lens</span>
+        </div>
+        <div class="about-badge">
+          <span class="about-badge-val">62</span>
+          <span class="about-badge-lbl">Pas-de-Calais</span>
+        </div>
+      </div>
+      <div class="about-content">
+        <div class="about-name">Cyril</div>
+        <div class="about-role">Couvreur-Zingueur &middot; Lens (62)</div>
+        <p class="about-text">
+          Artisan couvreur installé à Lens, Cyril est à la tête de 1001 Toitures depuis plusieurs années. Spécialisé en couverture traditionnelle et zinguerie, il intervient sur tous types de toitures — ardoise, tuile, bac acier — avec un souci constant du travail bien fait.
+        </p>
+        <p class="about-text">
+          Réactif lors des urgences après tempête et rigoureux dans ses devis, Cyril s'est construit une réputation solide dans tout le Pas-de-Calais grâce à sa fiabilité et son professionnalisme reconnus par ses clients.
+        </p>
+        <div class="about-certs">
+          <div class="cert-item">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+            Devis gratuit et sans engagement
+          </div>
+          <div class="cert-item">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Travaux assurés — responsabilité professionnelle
+          </div>
+          <div class="cert-item">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+            Intervention rapide après tempête
+          </div>
+          <div class="cert-item">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Basé 36 Rue Jean Moulin, 62300 Lens
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA + FORM -->
+<section id="devis" class="section cta-section">
+  <div class="section-inner">
+    <div class="cta-grid">
+      <div class="cta-left fade-up">
+        <div class="section-tag">Devis gratuit</div>
+        <h2 class="cta-headline">Obtenez votre devis<br><span>toiture gratuit</span></h2>
+        <p class="cta-lead">
+          Remplissez le formulaire ou appelez directement. Réponse rapide, devis détaillé et sans engagement — intervention dans tout le Pas-de-Calais.
+        </p>
+        <div class="cta-tel-block">
+          <div class="cta-tel-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.06 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+          </div>
+          <div>
+            <div class="cta-tel-label">Appel direct</div>
+            <a href="tel:0610936914" class="cta-tel-number">06 10 93 69 14</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="fade-up">
+        <form class="contact-form" action="mailto:contact@1001toitures-lens.fr" method="post" enctype="text/plain">
+          <div class="form-row">
+            <div>
+              <label class="form-label">Prénom &amp; Nom</label>
+              <input type="text" class="form-input" placeholder="Jean Dupont" required>
+            </div>
+            <div>
+              <label class="form-label">Téléphone</label>
+              <input type="tel" class="form-input" placeholder="06 XX XX XX XX" required>
+            </div>
+          </div>
+          <div>
+            <label class="form-label">Commune</label>
+            <input type="text" class="form-input" placeholder="Lens, Liévin, Hénin-Beaumont…">
+          </div>
+          <div>
+            <label class="form-label">Type de travaux</label>
+            <select class="form-select">
+              <option value="">Sélectionnez…</option>
+              <option>Réfection de toiture complète</option>
+              <option>Réparation / fuite</option>
+              <option>Zinguerie (gouttières, solins…)</option>
+              <option>Toiture bac acier</option>
+              <option>Entretien / démoussage</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div>
+            <label class="form-label">Message (optionnel)</label>
+            <textarea class="form-textarea" placeholder="Décrivez votre projet ou problème…"></textarea>
+          </div>
+          <button type="submit" class="form-submit">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+            Envoyer ma demande de devis
+          </button>
+          <p class="form-note">Gratuit &middot; Sans engagement &middot; Réponse sous 24h</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">1001 <span>TOITURES</span></div>
+        <p class="footer-brand-desc">Entreprise de couverture et zinguerie à Lens — réfection toiture, zinguerie sur mesure, bac acier et réparations urgentes dans tout le Pas-de-Calais.</p>
+        <div class="footer-contact-item">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.06 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+          <a href="tel:0610936914">06 10 93 69 14</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          36 Rue Jean Moulin, 62300 Lens
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <div class="footer-links">
+          <a href="#services">Réfection de toiture</a>
+          <a href="#services">Réparation &amp; entretien</a>
+          <a href="#services">Zinguerie sur mesure</a>
+          <a href="#services">Toiture bac acier</a>
+          <a href="#devis">Devis gratuit</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Zone</div>
+        <div class="footer-links">
+          <a href="#">Lens</a>
+          <a href="#">Liévin</a>
+          <a href="#">Hénin-Beaumont</a>
+          <a href="#">Béthune</a>
+          <a href="#">Douai · Arras</a>
+          <a href="#">Pas-de-Calais (62)</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 1001 Toitures — Lens (62300)</span>
+      <div class="footer-legal-links">
+        <a href="#">Mentions légales</a>
+        <a href="#">Politique de confidentialité</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- MOBILE STICKY BAR -->
+<div class="mobile-bar">
+  <a href="tel:0610936914" class="m-tel">
+    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.06 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+    Appeler
+  </a>
+  <a href="#devis" class="m-devis">
+    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+    Devis gratuit
+  </a>
+</div>
+
+<script>
+/* ── CURSOR GLOW ── */
+const glow = document.getElementById('cursor-glow');
+let gx = -400, gy = -400, cx = -400, cy = -400;
+document.addEventListener('mousemove', e => { gx = e.clientX; gy = e.clientY; });
+(function animGlow() {
+  cx += (gx - cx) * 0.09;
+  cy += (gy - cy) * 0.09;
+  glow.style.left = cx + 'px';
+  glow.style.top  = cy + 'px';
+  requestAnimationFrame(animGlow);
+})();
+
+/* ── CHAR SCRAMBLE (LENS) ── */
+(function() {
+  const el = document.getElementById('city-scramble');
+  if (!el) return;
+  const original = 'LENS';
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+  const specialMap = {};
+  const uniqueChars = [...new Set(original)];
+  uniqueChars.forEach(c => { specialMap[c] = c; });
+  let frame = 0, done = false;
+  function scramble() {
+    if (done) return;
+    frame++;
+    const progress = frame / 18;
+    el.textContent = original.split('').map((char, i) => {
+      if (i < Math.floor(progress * original.length)) return char;
+      return chars[Math.floor(Math.random() * chars.length)];
+    }).join('');
+    if (frame < 18) requestAnimationFrame(scramble);
+    else { el.textContent = original; done = true; }
+  }
+  setTimeout(scramble, 600);
+})();
+
+/* ── PARTICLES (slate fragments) ── */
+(function() {
+  const canvas = document.getElementById('particles-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let W, H, particles = [];
+  function resize() {
+    W = canvas.width  = canvas.parentElement.offsetWidth;
+    H = canvas.height = canvas.parentElement.offsetHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  function Particle() {
+    this.reset = function() {
+      this.x = Math.random() * W;
+      this.y = -20;
+      this.w = 8 + Math.random() * 16;
+      this.h = 3 + Math.random() * 5;
+      this.angle = -25 + Math.random() * 20;
+      this.vy = 0.4 + Math.random() * 0.8;
+      this.vx = -0.3 + Math.random() * 0.6;
+      this.opacity = 0.04 + Math.random() * 0.12;
+      // random palette: slate copper or zinc
+      const palettes = [
+        `rgba(200,104,44,`,
+        `rgba(78,114,153,`,
+        `rgba(140,100,70,`
+      ];
+      this.color = palettes[Math.floor(Math.random() * palettes.length)];
+    };
+    this.reset();
+    this.y = Math.random() * H;
+  }
+  for (let i = 0; i < 40; i++) particles.push(new Particle());
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    particles.forEach(p => {
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.angle * Math.PI / 180);
+      ctx.fillStyle = p.color + p.opacity + ')';
+      ctx.fillRect(-p.w/2, -p.h/2, p.w, p.h);
+      ctx.restore();
+      p.x += p.vx;
+      p.y += p.vy;
+      if (p.y > H + 20) p.reset();
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+/* ── 3D TILT ── */
+document.querySelectorAll('.service-card').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const r = card.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width  - 0.5;
+    const y = (e.clientY - r.top)  / r.height - 0.5;
+    card.style.transform = `perspective(600px) rotateY(${x * 10}deg) rotateX(${-y * 10}deg)`;
+  });
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = 'perspective(600px) rotateX(0) rotateY(0)';
+    card.style.transition = 'transform .4s ease';
+    setTimeout(() => { card.style.transition = ''; }, 400);
+  });
+});
+
+/* ── FADE UP ── */
+const fadeObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); fadeObs.unobserve(e.target); } });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-up').forEach(el => fadeObs.observe(el));
+
+/* ── REVIEWS CAROUSEL (mobile drag) ── */
+(function() {
+  const scroll = document.getElementById('rv-carousel');
+  if (!scroll) return;
+  let isDown = false, startX = 0, scrollLeft = 0;
+  scroll.addEventListener('mousedown', e => {
+    isDown = true;
+    scroll.style.cursor = 'grabbing';
+    startX = e.pageX - scroll.offsetLeft;
+    scrollLeft = scroll.scrollLeft;
+  });
+  document.addEventListener('mouseup', () => { isDown = false; scroll.style.cursor = 'grab'; });
+  scroll.addEventListener('mousemove', e => {
+    if (!isDown) return;
+    e.preventDefault();
+    scroll.scrollLeft = scrollLeft - (e.pageX - scroll.offsetLeft - startX);
+  });
+})();
+</script>
+</body>
+</html>
